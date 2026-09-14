@@ -1,0 +1,32 @@
+Smart Adaptive Traffic Light Controller
+Running 2 cycle(s). Each cycle serves NORTH, SOUTH, EAST, WEST once.
+
+===== Cycle 1/2 =====
+
+[NORMAL] NORTH | vehicles=6 | density=0.30 | green=10s
+
+[NORMAL] SOUTH | vehicles=18 | density=0.90 | green=19s
+  >> Emergency vehicle detected mid-phase, interrupting SOUTH
+
+[EMERGENCY] WEST | clearing for 6s
+  << WEST emergency vehicle has cleared the intersection
+
+[NORMAL] EAST | vehicles=11 | density=0.55 | green=13s
+  >> Emergency vehicle detected mid-phase, interrupting EAST
+
+[EMERGENCY] WEST | clearing for 6s
+  << WEST emergency vehicle has cleared the intersection
+
+[NORMAL] WEST | vehicles=5 | density=0.25 | green=9s
+
+===== Cycle 2/2 =====
+
+[NORMAL] NORTH | vehicles=18 | density=0.90 | green=19s
+
+[NORMAL] SOUTH | vehicles=2 | density=0.10 | green=7s
+
+[NORMAL] EAST | vehicles=4 | density=0.20 | green=8s
+
+[NORMAL] WEST | vehicles=13 | density=0.65 | green=15s
+
+Simulation finished. All lanes RED (safe idle state).
